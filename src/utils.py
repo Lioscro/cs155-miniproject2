@@ -35,7 +35,7 @@ MOVIES_COLUMNS = [
     'sci_fi',
     'thriller',
     'war',
-    'wetern'
+    'western'
 ]
 DATA_COLUMNS = ['user_id', 'movie_id', 'rating']
 
