@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 
 # handy function that performs the SVD for V and then gives the 2D projection of V back
-def plot_2d_projection_V(V_mat, movies_df indices = list(range(10))):
+def plot_2d_projection_V(V_mat, movies_df, indices = list(range(10))):
     # first, perform the SVD to get the 2 columns
     A, s, vh = np.linalg.svd(V_mat)
     # get the first two columns
@@ -17,16 +17,17 @@ def plot_2d_projection_V(V_mat, movies_df indices = list(range(10))):
 
     
     # now perform the actual plotting
+    plt.figure(figsize=(20,10))
     to_plot = V_bar[indices, :]
     plt.scatter(to_plot[:, 0], to_plot[:, 1])
     for num in range(len(indices)):
 
-        label = f"{indices[num]}"
+        label = movies_df.at[indices[num],'title']
 
         plt.annotate(label, # this is the text
                      (to_plot[num, 0],to_plot[num, 1]), # this is the point to label
                      textcoords="offset points", # how to position the text
                      xytext=(5,5), # distance from text to points (x,y)
-                     ha='center') # horizontal alignment can be left, right or center
+                     ha='left') # horizontal alignment can be left, right or center
     plt.show()
     return
