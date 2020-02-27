@@ -39,21 +39,32 @@ MOVIES_COLUMNS = [
 ]
 DATA_COLUMNS = ['user_id', 'movie_id', 'rating']
 
+def reindex(df, columns=['user_id', 'movie_id']):
+    df = df.copy()
+    for col in columns:
+        if col in df:
+            df[col] -= 1
+    return df
+
 def load_data():
     """Load the entire (train + test) dataset as a Pandas DataFrame."""
-    return pd.read_csv(DATA_PATH, names=DATA_COLUMNS, delimiter='\t')
+    df = pd.read_csv(DATA_PATH, names=DATA_COLUMNS, delimiter='\t')
+    return reindex(df)
 
 def load_train_data():
     """Load the train dataset as a Pandas DataFrame."""
-    return pd.read_csv(TRAIN_DATA_PATH, names=DATA_COLUMNS, delimiter='\t')
+    df = pd.read_csv(TRAIN_DATA_PATH, names=DATA_COLUMNS, delimiter='\t')
+    return reindex(df)
 
 def load_test_data():
     """Load the test dataset as a Pandas DataFrame."""
-    return pd.read_csv(TEST_DATA_PATH, names=DATA_COLUMNS, delimiter='\t')
+    df = pd.read_csv(TEST_DATA_PATH, names=DATA_COLUMNS, delimiter='\t')
+    return reindex(df)
 
 def load_movies():
     """Load the movie info as a Pandas DataFrame."""
-    return pd.read_csv(MOVIES_PATH, names=MOVIES_COLUMNS, delimiter='\t')
+    df = pd.read_csv(MOVIES_PATH, names=MOVIES_COLUMNS, delimiter='\t')
+    return reindex(df)
 
 def add_missing_ratings(df, movie_ids, user_id=None):
     """"Add a single rating of 2.5 to all movies with no ratings in the
