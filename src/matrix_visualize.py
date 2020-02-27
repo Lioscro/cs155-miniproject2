@@ -23,7 +23,7 @@ def plot_2d_projection_V(V_mat, movies_df, indices = list(range(10))):
     for num in range(len(indices)):
 
         label = movies_df.at[indices[num],'title']
-
+        # print(f"Adding film {label} with index {indices[num]}")
         plt.annotate(label, # this is the text
                      (to_plot[num, 0],to_plot[num, 1]), # this is the point to label
                      textcoords="offset points", # how to position the text
