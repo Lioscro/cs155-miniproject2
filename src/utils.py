@@ -4,11 +4,14 @@ import numpy as np
 import pandas as pd
 
 # Paths to text files
-DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
+ROOT_DIR = os.path.join(os.path.dirname(__file__), '..')
+DATA_DIR = os.path.join(ROOT_DIR, 'data')
 DATA_PATH = os.path.join(DATA_DIR, 'data.txt')
 TRAIN_DATA_PATH = os.path.join(DATA_DIR, 'train.txt')
 TEST_DATA_PATH = os.path.join(DATA_DIR, 'test.txt')
 MOVIES_PATH = os.path.join(DATA_DIR, 'movies.txt')
+
+PLOTS_DIR = os.path.join(ROOT_DIR, 'plots')
 
 # Text file columns
 MOVIES_COLUMNS = [
@@ -64,3 +67,6 @@ def add_missing_ratings(df, movie_ids, user_id=None):
         columns=df.columns
     )
     return pd.concat((df, df_add))
+
+def save_fig(fig, name):
+    fig.savefig(os.path.join(PLOTS_DIR, name), dpi=300, bbox_inches='tight')
