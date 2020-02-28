@@ -42,6 +42,17 @@ def get_documentary():
 def get_scifi():
     return []
 
+# This returns the 10 selected comedy films, which are:
+# []
+def get_comedy():
+    return []
+
+
+# This returns the 10 selected action films, which are:
+# []
+def get_action():
+    return []
+
 # This returns the 10 randomly selected films, which are:
 # []
 def random_ten():
