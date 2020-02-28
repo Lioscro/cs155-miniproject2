@@ -38,9 +38,13 @@ def get_documentary():
 
 
 # This returns the 10 selected scifi films, which are:
-# []
+# ['Twelve Monkeys (1995)', 'Strange Days (1995)',
+# 'Terminator 2: Judgment Day (1991)', 'Alien (1979)',
+# 'Escape from L.A. (1996)', 'Visitors, The (Visiteurs, Les) (1993)', 
+# 'Nemesis 2: Nebula (1995)', 'Kid in King Arthur's Court, A (1995)',
+# 'Star Trek: First Contact (1996)', 'Mars Attacks! (1996)']
 def get_scifi():
-    return []
+    return [7, 39, 96, 183, 831, 1472, 1596, 560, 222, 235]
 
 # This returns the 10 selected comedy films, which are:
 # []
