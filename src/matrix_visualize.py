@@ -6,14 +6,13 @@ import numpy as np
 import pandas as pd
 
 # handy function that performs the SVD for V and then gives the 2D projection of V back
-def plot_2d_projection_V(V_mat, movies_df, indices = list(range(10))):
+def plot_2d_projection_V(V_mat, movies_df, indices = list(range(10)), title = 'Matrix Visualization'):
     # first, perform the SVD to get the 2 columns
     A, s, vh = np.linalg.svd(V_mat)
     # get the first two columns
     u_12 = A[:,:2]
     V_bar = np.transpose(np.matmul(u_12.T, V_mat)) # returns an (n by 2) matrix
     
-    # TODO: scale the data to be between -1 and 1?
 
     
     # now perform the actual plotting
@@ -29,5 +28,8 @@ def plot_2d_projection_V(V_mat, movies_df, indices = list(range(10))):
                      textcoords="offset points", # how to position the text
                      xytext=(5,5), # distance from text to points (x,y)
                      ha='left') # horizontal alignment can be left, right or center
+    plt.title(title)
+    plt.xlabel('Principal Component 1')
+    plt.ylabel('Principal Component 2')
     plt.show()
     return
