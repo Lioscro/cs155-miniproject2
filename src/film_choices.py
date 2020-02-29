@@ -44,7 +44,7 @@ def get_documentary():
 # 'Nemesis 2: Nebula (1995)', 'Kid in King Arthur's Court, A (1995)',
 # 'Star Trek: First Contact (1996)', 'Mars Attacks! (1996)']
 def get_scifi():
-    return [7, 39, 96, 183, 831, 1472, 1596, 560, 222, 235]
+    return [6, 38, 95, 182, 830, 1471, 1595, 559, 221, 234]
 
 # This returns the 10 selected comedy films, which are:
 # ['Mars Attacks! (1996)', 'Strictly Ballroom (1992)',
