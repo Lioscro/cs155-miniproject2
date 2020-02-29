@@ -40,16 +40,20 @@ def get_documentary():
 # This returns the 10 selected scifi films, which are:
 # ['Twelve Monkeys (1995)', 'Strange Days (1995)',
 # 'Terminator 2: Judgment Day (1991)', 'Alien (1979)',
-# 'Escape from L.A. (1996)', 'Visitors, The (Visiteurs, Les) (1993)', 
+# 'Escape from L.A. (1996)', 'Visitors, The (Visiteurs, Les) (1993)',
 # 'Nemesis 2: Nebula (1995)', 'Kid in King Arthur's Court, A (1995)',
 # 'Star Trek: First Contact (1996)', 'Mars Attacks! (1996)']
 def get_scifi():
     return [7, 39, 96, 183, 831, 1472, 1596, 560, 222, 235]
 
 # This returns the 10 selected comedy films, which are:
-# []
+# ['Mars Attacks! (1996)', 'Strictly Ballroom (1992)',
+# 'Naked in New York (1994)', 'Manhattan (1979)',
+# 'Cable Guy, The (1996)', 'Lady of Burlesque (1943)',
+# 'Sabrina (1954)', 'George of the Jungle (1997)',
+# 'Richie Rich (1994)', 'Life with Mikey (1993)']
 def get_comedy():
-    return []
+    return [234,  708, 1501,  516,  121, 1451,  485,  258,  794, 1269]
 
 
 # This returns the 10 selected action films, which are:
