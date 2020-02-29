@@ -57,17 +57,17 @@ def get_comedy():
 
 
 # This returns the 10 selected action films, which are:
-# [GoldenEye (1995), Terminator 2: Judgment Day (1991), Supercop (1992),
-# Die Hard (1988), Raiders of the Lost Ark (1981), Terminator, The (1984),
-# Indiana Jones and the Last Crusade (1989), Air Force One (1997),
-# Mission: Impossible (1996), Hackers (1995)]
+# ['GoldenEye (1995)', 'Terminator 2: Judgment Day (1991)', 'Supercop (1992)',
+# 'Die Hard (1988)', 'Raiders of the Lost Ark (1981)', 'Terminator, The (1984)',
+# 'Indiana Jones and the Last Crusade (1989)', 'Air Force One (1997)',
+# 'Mission: Impossible (1996)', 'Hackers (1995)'']
 def get_action():
     return [1, 95, 127, 143, 173, 194, 209, 299, 404, 1138]
 
 # This returns the 10 randomly selected films, which are:
-# [Muppet Treasure Island (1996), Lion King, The (1994), Home Alone (1990),
-# Weekend at Bernie's (1989), Good, The Bad and The Ugly, The (1966), 
-# Dead Poets Society (1989), Star Trek: Generations (1994), 
-# Batman (1989), Miami Rhapsody (1995), Jumanji (1995)]
+# ['Muppet Treasure Island (1996)', 'Lion King, The (1994)', 'Home Alone (1990)',
+# 'Weekend at Bernie's (1989)', 'Good, The Bad and The Ugly, The (1966)', 
+# 'Dead Poets Society (1989)', 'Star Trek: Generations (1994)', 
+# 'Batman (1989)', 'Miami Rhapsody (1995)', 'Jumanji (1995)']
 def random_ten():
     return [20, 70, 93, 157, 176, 195, 379, 402, 699, 754]
